@@ -1,0 +1,74 @@
+JLYMON PRIVACY POLICY
+Last update: October 23, 2026
+
+Jlymon is an iOS app for the administrators of Jellyfin media servers. This
+policy tells you which data the app uses. It also tells you where the data
+goes and how you remove it.
+
+SUMMARY
+
+The developer of Jlymon does not collect data. The app does not have
+analytics, advertisements or tracking. The app does not contain third-party
+code that collects data. The app sends data only to the Jellyfin servers that
+you add.
+
+DATA THAT JLYMON SENDS TO YOUR SERVERS
+
+When you add a server, Jlymon connects to the address that you write. Jlymon
+sends this data only to that server:
+
+- Your sign-in data. This is a user name and a password, a Quick Connect
+  code, or an API key.
+- The name "Jlymon", the app version, the device type and a device
+  identifier. The device identifier is a random value that the app makes.
+  Jellyfin shows these values on its dashboard.
+- Requests for the data that the app shows. For example, the app requests
+  sessions, the activity log, users and libraries.
+- The commands that you give. For example, you stop a stream, scan a library
+  or restart the server.
+
+You or your server administrator control these servers. The policy of each
+server applies to the data that the server keeps. If the server address
+starts with http://, the connection does not have encryption.
+
+DATA THAT JLYMON KEEPS ON YOUR DEVICE
+
+- Jlymon keeps your sign-in data and the device identifier in the iOS
+  Keychain.
+- Jlymon keeps a cache of the activity history for the Graphs tab. It also
+  keeps a cache of images from your servers.
+- Jlymon keeps the selected server and the Live Activity switch in the app
+  settings.
+
+When a stream plays, the Live Activity shows user names and titles on the
+Lock Screen. To stop the Live Activity, set the Live Activity switch to off
+in the Servers sheet.
+
+SHARING
+
+Jlymon does not sell your data. Jlymon does not send your data to the
+developer or to a third party.
+
+HOW TO REMOVE YOUR DATA
+
+To remove the data for one server, sign out of that server in the Servers
+sheet. Jlymon then removes the sign-in data for that server from the
+Keychain.
+
+To remove all data, sign out of each server. Then remove the app from your
+device. Because iOS can keep Keychain items after you remove an app, sign out
+before you remove the app.
+
+After you remove the app, the device identifier can stay in the Keychain.
+This identifier is a random value. It does not identify you.
+
+Because the developer does not keep a copy of your data, you do not need to
+send a request to the developer.
+
+CHILDREN
+
+Jlymon is a tool for server administrators. Jlymon is not for children.
+
+CHANGES TO THIS POLICY
+
+If this policy changes, this page shows the new policy and a new date.
