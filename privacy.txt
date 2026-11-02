@@ -1,5 +1,5 @@
 JLYMON PRIVACY POLICY
-Last update: October 23, 2026
+Last update: November 2, 2026
 
 Jlymon is an iOS app for the administrators of Jellyfin media servers. This
 policy tells you which data the app uses. It also tells you where the data
@@ -28,32 +28,57 @@ sends this data only to that server:
   or restart the server.
 
 You or your server administrator control these servers. The policy of each
-server applies to the data that the server keeps. If the server address
-starts with http://, the connection does not have encryption.
+server applies to the data that the server keeps.
+
+If you write a server address without https://, Jlymon uses http://. An
+http:// connection does not have encryption.
+
+DATA THAT JLYMON SENDS TO YOUR OTHER DEVICES
+
+If iCloud Sync is on, Jlymon sends the server list to your other devices
+through iCloud Keychain. Apple encrypts iCloud Keychain end to end, so the
+developer and Apple cannot read it. The list contains the server addresses,
+the server names, the user names and the API keys. Access tokens and
+passwords stay on the device. To stop the sync, set the iCloud Sync switch
+to off in the Servers sheet. Jlymon then does not read or change the list
+in iCloud Keychain, so a server that you sign out of stays in the list.
 
 DATA THAT JLYMON KEEPS ON YOUR DEVICE
 
-- Jlymon keeps your sign-in data and the device identifier in the iOS
-  Keychain.
+- Jlymon keeps an access token for each server, the device identifier and
+  the iCloud Sync switch in the iOS Keychain. The server gives the access
+  token when you sign in. If you sign in with an API key, the API key is the
+  access token. Jlymon does not keep your password.
 - Jlymon keeps a cache of the activity history for the Graphs tab. It also
   keeps a cache of images from your servers.
 - Jlymon keeps the selected server and the Live Activity switch in the app
   settings.
 
 When a stream plays, the Live Activity shows user names and titles on the
-Lock Screen. To stop the Live Activity, set the Live Activity switch to off
-in the Servers sheet.
+Lock Screen. The Live Activity updates only while Jlymon is open. After a
+stream stops, the Lock Screen can show the old data until you open Jlymon
+again. To stop the Live Activity, set the Live Activity switch to off in the
+Servers sheet.
 
 SHARING
 
 Jlymon does not sell your data. Jlymon does not send your data to the
-developer or to a third party.
+developer or to a third party. The iCloud Sync data goes only to your own
+devices, through your iCloud account.
 
 HOW TO REMOVE YOUR DATA
 
 To remove the data for one server, sign out of that server in the Servers
-sheet. Jlymon then removes the sign-in data for that server from the
-Keychain.
+sheet. Jlymon then removes the access token for that server from the
+Keychain. It also removes the activity history for that server and the cache
+of images. If iCloud Sync is on, Jlymon also removes the server from the list
+in iCloud Keychain. If iCloud Sync is off, the server stays in that list. To
+remove it from there, set the iCloud Sync switch to on, and then remove the
+server under From Your Other Devices in the Servers sheet.
+
+When you sign out, Jlymon asks the server to end the session. If the server
+cannot be reached, the access token stays valid on the server. To end the
+session, remove the device in the Jellyfin dashboard.
 
 To remove all data, sign out of each server. Then remove the app from your
 device. Because iOS can keep Keychain items after you remove an app, sign out
